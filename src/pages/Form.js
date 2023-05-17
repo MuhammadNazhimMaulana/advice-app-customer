@@ -1,3 +1,4 @@
+import {useNavigate} from 'react-router-dom';
 import {
     Card,
     Button,
@@ -10,6 +11,20 @@ import {
 import Footer from '../components/Footer';
 
 const Form = () => {
+    // Preparing Navigation
+    const navigate = useNavigate();
+
+    // Redirecting To Thanks
+    const handleSubmit = event => {
+        // No reset
+        event.preventDefault();
+
+        // Sending Data
+
+        // redirect to /contacts
+        navigate('/thanks');
+    };
+
     return ( 
         <div className="min-h-screen flex flex-col justify-center">
             <Card color="transparent" shadow={false} className="mt-auto">
@@ -19,7 +34,7 @@ const Form = () => {
                 <Typography color="black" className="mt-1 font-normal text-center md:text-md lg:text-lg">
                     Informasi yang Anda berikan akan kami jaga
                 </Typography>
-                <form className="mt-8 mb-2 w-80 max-w-screen-lg md:w-[35rem] lg:w-[60rem] mx-auto">
+                <form onSubmit={handleSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg md:w-[35rem] lg:w-[60rem] mx-auto">
                     <div className="mb-4 flex flex-col gap-6">
 
                         {/* Select Option */}
@@ -39,7 +54,7 @@ const Form = () => {
                         {/* Advice */}
                         <Textarea color="blue" variant="outlined" label="Saran" />
                     </div>
-                    <Button className="mt-6" fullWidth>
+                    <Button type="submit" className="mt-6" fullWidth>
                         Submit
                     </Button>
                 </form>

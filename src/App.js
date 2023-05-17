@@ -1,5 +1,6 @@
 import Home from './pages/Home';
 import Form from './pages/Form';
+import Thanks from './pages/Thanks';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/form" element={<Form />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/thanks" element={<Thanks />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
