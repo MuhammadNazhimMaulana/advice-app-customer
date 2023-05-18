@@ -60,7 +60,7 @@ const Form = () => {
                         <StarRating />
 
                         {/* Advice */}
-                        <Textarea onChange={handleChange} className="text-black" name="advice" value={advice} color="blue" variant="outlined" label="Saran"/>
+                        <Textarea onChange={handleChange} className="text-black" name="advice" value={advice} color="blue" variant="outlined" label="Kritik/Saran"/>
                     </div>
                     <Button type="submit" className="mt-6" fullWidth>
                         Submit

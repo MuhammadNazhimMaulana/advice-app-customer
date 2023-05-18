@@ -7,7 +7,7 @@ const Thanks = () => {
 
     useEffect(() => {
         setTimeout(() => {
-          // 👇 Redirects to about page, note the `replace: true`
+          // Redirect back to default page
           navigate('/', { replace: true });
         }, 3000);
       }, []);
