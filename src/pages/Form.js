@@ -1,4 +1,7 @@
-import {useNavigate} from 'react-router-dom';
+import {
+    useNavigate, 
+    useParams,
+} from 'react-router-dom';
 import {useState} from 'react';
 import {
     Card,
@@ -9,7 +12,7 @@ import {
 import StarRating from '../components/StarRating';
 import Footer from '../components/Footer';
 
-const Form = () => {
+const Form = () => { 
     // Preparing Navigation
     const navigate = useNavigate();
 
@@ -29,7 +32,7 @@ const Form = () => {
 
         // Sending Data
         // Rating
-        // console.log('value is:', event.target.rating.value);
+        // console.log('value is:', event.target.employee_id.value);
 
         // advice
         // console.log('value is:', advice);
@@ -37,6 +40,9 @@ const Form = () => {
         // redirect to /contacts
         navigate('/thanks');
     };
+
+    // Parameter
+    const params = useParams();
 
     return ( 
         <div className="min-h-screen flex flex-col justify-center">
@@ -58,6 +64,9 @@ const Form = () => {
 
                         {/* Rating */}
                         <StarRating />
+
+                        {/* Hidden */}
+                        <input type="hidden" value={params.id} name="employee_id" />
 
                         {/* Advice */}
                         <Textarea onChange={handleChange} className="text-black" name="advice" value={advice} color="blue" variant="outlined" label="Kritik/Saran"/>

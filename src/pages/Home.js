@@ -5,7 +5,7 @@ const Home = () => {
 
     return ( 
         <div className="flex items-center justify-center h-screen">
-            <button onClick={() => navigate("/form")} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <button onClick={() => navigate("/form/1")} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 Klik Disini
             </button>
         </div>
