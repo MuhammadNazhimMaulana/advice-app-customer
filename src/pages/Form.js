@@ -26,19 +26,33 @@ const Form = () => {
     };
       
     // Redirecting To Thanks
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         // No reset
         event.preventDefault();
 
-        // Sending Data
+        let employee_id = event.target.employee_id.value;
+        let score = event.target.rating.value;
+
+        // Body
+        const blog = { advice, employee_id, score };
+
+        // Second argument define request
+        const response = await fetch('http://localhost:8000/api/form-submit', {
+            method: 'POST',
+            headers: { "Content-Type" : "application/json",
+                        "accept" : "application/json"},
+            body: JSON.stringify(blog)
+        })
+
+        // Fetching Result
+        await response.json();
+
         // Rating
         // console.log('value is:', event.target.employee_id.value);
 
-        // advice
-        // console.log('value is:', advice);
-
         // redirect to /contacts
         navigate('/thanks');
+
     };
 
     // Parameter
