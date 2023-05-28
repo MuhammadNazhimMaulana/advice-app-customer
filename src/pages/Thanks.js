@@ -1,14 +1,20 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation  } from "react-router-dom";
 
 const Thanks = () => {
     // Navigation
     const navigate = useNavigate();
 
+    // Location
+    const location = useLocation();
+
+    // Retrieve data 
+    const data = JSON.parse(location.state);
+
     useEffect(() => {
         setTimeout(() => {
           // Redirect back to default page
-          navigate('/', { replace: true });
+          navigate('/form/' + data.employee_id, { replace: true });
         }, 3000);
       }, []);
 

@@ -51,7 +51,7 @@ const Form = () => {
         // console.log('value is:', event.target.employee_id.value);
 
         // redirect to /contacts
-        navigate('/thanks');
+        navigate('/thanks', { state: JSON.stringify(data) });
 
     };
 
