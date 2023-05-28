@@ -34,14 +34,14 @@ const Form = () => {
         let score = event.target.rating.value;
 
         // Body
-        const blog = { advice, employee_id, score };
+        const data = { advice, employee_id, score };
 
         // Second argument define request
         const response = await fetch('http://localhost:8000/api/form-submit', {
             method: 'POST',
             headers: { "Content-Type" : "application/json",
                         "accept" : "application/json"},
-            body: JSON.stringify(blog)
+            body: JSON.stringify(data)
         })
 
         // Fetching Result
