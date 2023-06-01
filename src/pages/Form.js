@@ -2,12 +2,10 @@ import {
     useNavigate, 
     useParams,
 } from 'react-router-dom';
-import {useState} from 'react';
 import {
     Card,
     Button,
     Typography,
-    Textarea
 } from "@material-tailwind/react";
 import StarRating from '../components/StarRating';
 import Footer from '../components/Footer';
@@ -16,14 +14,6 @@ const Form = () => {
     // Preparing Navigation
     const navigate = useNavigate();
 
-    // For Advice
-    const [advice, setAdvice] = useState('');
-
-    const handleChange = event => {
-        // Set New Advice Value
-        setAdvice(event.target.value);
-
-    };
       
     // Redirecting To Thanks
     const handleSubmit = async (event) => {
@@ -32,7 +22,8 @@ const Form = () => {
 
         let employee_id = event.target.employee_id.value;
         let score = event.target.rating.value;
-
+        let advice = event.target.advice.value;
+      
         // Body
         const data = { advice, employee_id, score };
 
@@ -81,9 +72,7 @@ const Form = () => {
 
                         {/* Hidden */}
                         <input type="hidden" value={params.id} name="employee_id" />
-
-                        {/* Advice */}
-                        <Textarea onChange={handleChange} className="text-black" name="advice" value={advice} color="blue" variant="outlined" label="Kritik/Saran"/>
+                       
                     </div>
                     <Button type="submit" className="mt-6" fullWidth>
                         Submit
