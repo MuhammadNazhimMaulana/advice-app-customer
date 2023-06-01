@@ -7,7 +7,7 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
-import StarRating from '../components/StarRating';
+import StarRating from '../components/Rating';
 import Footer from '../components/Footer';
 
 const Form = () => { 
