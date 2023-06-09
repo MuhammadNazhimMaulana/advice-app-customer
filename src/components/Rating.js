@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
-  Textarea
+  Textarea,
+  Tooltip
 } from "@material-tailwind/react";
 
 const StarRating = ({TextArea}) => {
@@ -26,19 +27,34 @@ const StarRating = ({TextArea}) => {
       // Finding Emoji
         if(index === 5){
           emo.push(
-          <span  title="Recommended" className="star text-4xl lg:text-7xl">&#128526;</span>)
+            <Tooltip content="Recommended">
+              <span className="star text-4xl lg:text-7xl">&#128526;</span>
+            </Tooltip>
+          )
         }else if(index === 4){
-          
-          emo.push(<span title="Memuaskan" className="star text-4xl lg:text-7xl">&#128537;</span>)
+          emo.push(
+            <Tooltip content="Memuaskan">
+              <span className="star text-4xl lg:text-7xl">&#128537;</span>
+            </Tooltip>
+          )
         }else if(index === 3){
-          
-          emo.push(<span title="Sesuai Janji" className="star text-4xl lg:text-7xl">&#128513;</span>)
+          emo.push(
+            <Tooltip content="Sesuai Janji"> 
+              <span title="Sesuai Janji" className="star text-4xl lg:text-7xl">&#128513;</span>
+            </Tooltip>
+          )
         }else if(index === 2){
-          
-          emo.push(<span title="Tidak Puas" className="star text-4xl lg:text-7xl">&#128557;</span>)
+          emo.push(
+            <Tooltip content="Tidak Puas"> 
+              <span title="Tidak Puas" className="star text-4xl lg:text-7xl">&#128557;</span>
+            </Tooltip>
+          )
         } else if(index === 1){
-          
-          emo.push(<span title="Kriminal" className="star text-4xl lg:text-7xl">&#128561;</span>)
+          emo.push(
+            <Tooltip content="Kriminal"> 
+              <span title="Kriminal" className="star text-4xl lg:text-7xl">&#128561;</span>
+            </Tooltip>
+          )
         }
     };
 
