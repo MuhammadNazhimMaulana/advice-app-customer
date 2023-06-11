@@ -1,6 +1,7 @@
 import Home from './pages/Home';
 import Form from './pages/Form';
 import Thanks from './pages/Thanks';
+import NotFound from './pages/NotFound';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/thanks" element={<Thanks />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
