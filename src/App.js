@@ -10,14 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-        </Routes>
-        <Routes>
           <Route path="/form/:id" element={<Form />}></Route>
-        </Routes>
-        <Routes>
           <Route path="/thanks" element={<Thanks />}></Route>
-        </Routes>
-        <Routes>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
