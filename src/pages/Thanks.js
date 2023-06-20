@@ -16,7 +16,7 @@ const Thanks = () => {
           // Redirect back to default page
           navigate('/form/' + data.employee_id, { replace: true });
         }, 3000);
-      }, []);
+      });
 
     return (
         <div className="flex flex-col items-center justify-center h-screen">

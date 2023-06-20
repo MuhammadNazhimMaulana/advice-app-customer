@@ -3,6 +3,7 @@ import {
   Textarea,
   Tooltip
 } from "@material-tailwind/react";
+import InfoModal from '../components/InfoModal';
 
 const StarRating = ({TextArea}) => {
     const [rating, setRating] = useState(0);
@@ -99,6 +100,7 @@ const StarRating = ({TextArea}) => {
 
         {/* Advice */}
         <div className="mt-6">
+            <InfoModal />
             <Textarea required={required} onChange={handleChange} className="text-black" name="advice" value={advice} color="blue" variant="outlined" label="Kritik/Saran"/>
         </div>
       </div>

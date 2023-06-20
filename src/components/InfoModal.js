@@ -17,8 +17,8 @@ const InfoModal = () => {
       <Fragment>
 
         {/* Set Up The Button */}
-        <div className="relative h-full w-full">
-            <button className="absolute top-0 right-0 h-16 w-16 " onClick={handleOpen}><FaInfoCircle /></button>
+        <div className="flex h-full w-full justify-end mb-3">
+            <p className="hover:cursor-pointer" onClick={handleOpen}><FaInfoCircle /></p>
         </div>
 
 
@@ -43,7 +43,6 @@ const InfoModal = () => {
 
             {/* Close Button */}
             <Button
-              color="black"
               onClick={handleOpen}
               className="mr-1 w-full"
             >
