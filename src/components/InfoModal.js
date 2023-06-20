@@ -32,12 +32,37 @@ const InfoModal = () => {
             unmount: { scale: 0.9, y: -100 },
           }}
         >
-          <DialogHeader>Informasi</DialogHeader>
+          <DialogHeader className="text-center">Informasi</DialogHeader>
           <DialogBody divider>
-            The key to more success is to have a lot of pillows. Put it this way, it took me
-            twenty five years to get these plants, twenty five years of blood sweat and tears, and
-            I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan
-            luv.
+
+            {/* Kalimat Informasi */}
+            <p className="text-black mb-5 text-justify">Penilaian yang dilakukan sebatas pelayanan dari petugas loket kami, berikut gambaran lebih jelasnya mengenai setiap pilihan yang ada:</p>
+
+            {/* Table Informasi */}
+            <table className="w-full text-black">
+            <tbody>
+                <tr>
+                  <td>&#128526; (Recommended)</td>
+                  <td className="text-center">Sangat Puas</td>
+                </tr>
+                <tr>
+                  <td>&#128537; (Memuaskan)</td>
+                  <td className="text-center">Memuaskan</td>
+                </tr>
+                <tr>
+                  <td>&#128513; (Sesuai Janji)</td>
+                  <td className="text-center">Cukup Puas</td>
+                </tr>
+                <tr>
+                  <td>&#128557; (Tidak Puas)</td>
+                  <td className="text-center">Tidak Puas</td>
+                </tr>
+                <tr>
+                  <td>&#128561; (Kriminal)</td>
+                  <td className="text-center">Sangat Tidak Puas</td>
+                </tr>
+              </tbody>
+            </table>
           </DialogBody>
           <DialogFooter>
 
