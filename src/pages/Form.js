@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import StarRating from '../components/Rating';
 import Footer from '../components/Footer';
+import InfoModal from '../components/InfoModal';
 
 const Form = () => { 
     // Preparing Navigation
@@ -51,6 +52,7 @@ const Form = () => {
 
     return ( 
         <div className="min-h-screen flex flex-col justify-center">
+            <InfoModal></InfoModal>
             <Card color="transparent" shadow={false} className="mt-auto">
                 <Typography variant="h4" color="black" className="text-center md:text-3xl lg:text-4xl">
                     Silakan Berikan Penilaian Anda
