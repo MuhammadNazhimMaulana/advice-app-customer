@@ -24,7 +24,7 @@ const InfoModal = () => {
 
         {/* Information */}
         <Dialog 
-          className="w-screen min-w-[60%] max-w-[60%]"
+          className="w-screen min-w-[60%] max-w-[60%] lg:min-w-[40%] lg:max-w-[40%]"
           open={open}
           handler={handleOpen}
           animate={{
