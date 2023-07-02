@@ -28,7 +28,7 @@ const Form = () => {
         const data = { advice, employee_id, score };
 
         // Second argument define request
-        const response = await fetch('http://localhost:8000/api/form-submit', {
+        const response = await fetch('https://advice-app-admin-production.up.railway.app/api/form-submit', {
             method: 'POST',
             headers: { "Content-Type" : "application/json",
                         "accept" : "application/json"},
