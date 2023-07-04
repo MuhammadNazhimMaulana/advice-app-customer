@@ -28,7 +28,7 @@ const StarRating = ({TextArea}) => {
       // Finding Emoji
         if(index === 5){
           emo.push(
-            <Tooltip content="Recommended">
+            <Tooltip content="Sangat Puas">
               <span className="star text-4xl lg:text-7xl">&#128526;</span>
             </Tooltip>
           )
@@ -40,7 +40,7 @@ const StarRating = ({TextArea}) => {
           )
         }else if(index === 3){
           emo.push(
-            <Tooltip content="Sesuai Janji"> 
+            <Tooltip content="Cukup Puas"> 
               <span title="Sesuai Janji" className="star text-4xl lg:text-7xl">&#128513;</span>
             </Tooltip>
           )
@@ -52,7 +52,7 @@ const StarRating = ({TextArea}) => {
           )
         } else if(index === 1){
           emo.push(
-            <Tooltip content="Kriminal"> 
+            <Tooltip content="Sangat Tidak Puas"> 
               <span title="Kriminal" className="star text-4xl lg:text-7xl">&#128561;</span>
             </Tooltip>
           )
